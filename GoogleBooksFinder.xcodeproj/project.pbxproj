@@ -16,6 +16,7 @@
 		FA5772FC29B086D00073D508 /* BookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5772FB29B086D00073D508 /* BookSearchViewController.swift */; };
 		FA5772FE29B087870073D508 /* BooksFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5772FD29B087870073D508 /* BooksFetcher.swift */; };
 		FA57730129B087AC0073D508 /* CosyNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = FA57730029B087AC0073D508 /* CosyNetwork */; };
+		FA57730329B08BB40073D508 /* BookSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA57730229B08BB40073D508 /* BookSearchCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		FA5772EE29B086100073D508 /* GoogleBooksFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FA5772FB29B086D00073D508 /* BookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchViewController.swift; sourceTree = "<group>"; };
 		FA5772FD29B087870073D508 /* BooksFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksFetcher.swift; sourceTree = "<group>"; };
+		FA57730229B08BB40073D508 /* BookSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				FA5772CB29B0860E0073D508 /* AppDelegate.swift */,
 				FA5772FB29B086D00073D508 /* BookSearchViewController.swift */,
+				FA57730229B08BB40073D508 /* BookSearchCell.swift */,
 				FA5772FD29B087870073D508 /* BooksFetcher.swift */,
 				FA5772D429B086100073D508 /* Assets.xcassets */,
 				FA5772D629B086100073D508 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA57730329B08BB40073D508 /* BookSearchCell.swift in Sources */,
 				FA5772FE29B087870073D508 /* BooksFetcher.swift in Sources */,
 				FA5772FC29B086D00073D508 /* BookSearchViewController.swift in Sources */,
 				FA5772CC29B0860E0073D508 /* AppDelegate.swift in Sources */,
