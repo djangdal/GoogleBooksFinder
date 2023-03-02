@@ -64,8 +64,11 @@ extension BookSearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         booksFetcher.fetchBooks(with: searchText) { result in
             switch result {
-            case .failure(let error): print("Error while searching for books \(error)")
-            case .success(let books): print("Got \(books.count) books")
+            case .failure(let error):
+                print("Error while searching for books \(error)")
+                self.books = []
+            case .success(let books):
+                print("Got \(books.count) books")
                 self.books = books
             }
         }

@@ -44,7 +44,21 @@ fileprivate struct BookSearchRequest: APIDecodableRequest {
 }
 
 struct BookSearchError: Error, Decodable {
-    let error: String
+    let error: ErrorBody
+
+    struct ErrorBody: Decodable {
+        let code: Int
+        let message: String
+        let errors: [ErrorRow]
+
+        struct ErrorRow: Decodable {
+            let message: String
+            let domain: String
+            let reason: String
+            let location: String
+            let locationType: String
+        }
+    }
 }
 
 struct MetaData: Decodable {
