@@ -11,6 +11,7 @@ import UIKit
 final class BookSearchViewController: UIViewController {
     private let booksFetcher: BooksFetcher
     private let tableView = UITableView()
+    private let searchBar = UISearchBar()
 
     private var books: [Book] = [] {
         didSet {
@@ -23,13 +24,6 @@ final class BookSearchViewController: UIViewController {
     init(booksFetcher: BooksFetcher) {
         self.booksFetcher = booksFetcher
         super.init(nibName: nil, bundle: nil)
-        booksFetcher.fetchBooks(with: "example books") { result in
-            switch result {
-            case .failure(let error): print("Error while getting books \(error)")
-            case .success(let books): print("Got \(books.count) books")
-                self.books = books
-            }
-        }
     }
 
     required init?(coder: NSCoder) {
@@ -39,7 +33,17 @@ final class BookSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        setupSearchBar()
         setupTableView()
+    }
+
+    func setupSearchBar() {
+        searchBar.delegate = self
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(searchBar)
+        searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        searchBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        searchBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
     }
 
     func setupTableView() {
@@ -49,10 +53,22 @@ final class BookSearchViewController: UIViewController {
         tableView.register(BookSearchCell.self, forCellReuseIdentifier: BookSearchCell.identifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    }
+}
+
+extension BookSearchViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        booksFetcher.fetchBooks(with: searchText) { result in
+            switch result {
+            case .failure(let error): print("Error while searching for books \(error)")
+            case .success(let books): print("Got \(books.count) books")
+                self.books = books
+            }
+        }
     }
 }
 
