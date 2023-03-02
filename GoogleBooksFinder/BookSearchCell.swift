@@ -17,7 +17,7 @@ final class BookSearchCell: UITableViewCell {
     var book: Book? = nil {
         didSet {
             titleLabel.text =  book?.volumeInfo.title
-            guard let urlString = book?.volumeInfo.imageLinks.smallThumbnail,
+            guard let urlString = book?.volumeInfo.imageLinks?.smallThumbnail,
                   let url = URL(string: urlString) else { return }
 
             let dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, _, _) in

@@ -57,10 +57,10 @@ struct Book: Decodable {
 
     struct VolumeInfo: Decodable {
         let title: String
-        let imageLinks: ImageLinks
+        let imageLinks: ImageLinks?
 
         struct ImageLinks: Decodable {
-            let smallThumbnail: String
+            let smallThumbnail: String?
         }
     }
 }
