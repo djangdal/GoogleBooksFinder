@@ -1,0 +1,22 @@
+{
+  "DVTSourceControlWorkspaceBlueprintLocationsKey" : {
+    "2AD9C01AEED2BA6684D810FF62EB533650AA3C91" : {
+      "DVTSourceControlWorkspaceBlueprintLocationTypeKey" : "DVTSourceControlLockedRevisionLocation",
+      "DVTSourceControlLocationRevisionKey" : "d5e8d009297d1cd40b04ad3e9a795058062cd16a"
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "964423CA-7B15-4517-9472-AA4486E86E8A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2AD9C01AEED2BA6684D810FF62EB533650AA3C91" : "..\/Library\/Developer\/Xcode\/DerivedData\/GoogleBooksFinder-gzagoedqpnxnvxgtppamzphgleul\/SourcePackages\/checkouts\/CosyNetwork"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GoogleBooksFinder",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GoogleBooksFinder.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/davidjangdal\/Library\/Developer\/Xcode\/DerivedData\/GoogleBooksFinder-gzagoedqpnxnvxgtppamzphgleul\/SourcePackages\/repositories\/CosyNetwork-3e59ef18",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2AD9C01AEED2BA6684D810FF62EB533650AA3C91"
+    }
+  ]
+}
