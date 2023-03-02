@@ -52,6 +52,12 @@ final class BookSearchCell: UITableViewCell {
         contentView.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor, constant: 0).isActive = true
         titleLabel.textColor = .black
     }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleLabel.text = ""
+        bookImageView.image = nil
+    }
     
     required init?(coder: NSCoder) {
         fatalError()
