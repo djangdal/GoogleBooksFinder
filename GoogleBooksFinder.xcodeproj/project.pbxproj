@@ -14,6 +14,8 @@
 		FA5772ED29B086100073D508 /* GoogleBooksFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5772EC29B086100073D508 /* GoogleBooksFinderUITests.swift */; };
 		FA5772EF29B086100073D508 /* GoogleBooksFinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5772EE29B086100073D508 /* GoogleBooksFinderUITestsLaunchTests.swift */; };
 		FA5772FC29B086D00073D508 /* BookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5772FB29B086D00073D508 /* BookSearchViewController.swift */; };
+		FA5772FE29B087870073D508 /* BooksFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5772FD29B087870073D508 /* BooksFetcher.swift */; };
+		FA57730129B087AC0073D508 /* CosyNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = FA57730029B087AC0073D508 /* CosyNetwork */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,7 @@
 		FA5772EC29B086100073D508 /* GoogleBooksFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksFinderUITests.swift; sourceTree = "<group>"; };
 		FA5772EE29B086100073D508 /* GoogleBooksFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FA5772FB29B086D00073D508 /* BookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchViewController.swift; sourceTree = "<group>"; };
+		FA5772FD29B087870073D508 /* BooksFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA57730129B087AC0073D508 /* CosyNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +101,7 @@
 			children = (
 				FA5772CB29B0860E0073D508 /* AppDelegate.swift */,
 				FA5772FB29B086D00073D508 /* BookSearchViewController.swift */,
+				FA5772FD29B087870073D508 /* BooksFetcher.swift */,
 				FA5772D429B086100073D508 /* Assets.xcassets */,
 				FA5772D629B086100073D508 /* LaunchScreen.storyboard */,
 				FA5772D929B086100073D508 /* Info.plist */,
@@ -137,6 +142,9 @@
 			dependencies = (
 			);
 			name = GoogleBooksFinder;
+			packageProductDependencies = (
+				FA57730029B087AC0073D508 /* CosyNetwork */,
+			);
 			productName = GoogleBooksFinder;
 			productReference = FA5772C829B0860E0073D508 /* GoogleBooksFinder.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +217,9 @@
 				Base,
 			);
 			mainGroup = FA5772BF29B0860E0073D508;
+			packageReferences = (
+				FA5772FF29B087AC0073D508 /* XCRemoteSwiftPackageReference "CosyNetwork" */,
+			);
 			productRefGroup = FA5772C929B0860E0073D508 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -251,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5772FE29B087870073D508 /* BooksFetcher.swift in Sources */,
 				FA5772FC29B086D00073D508 /* BookSearchViewController.swift in Sources */,
 				FA5772CC29B0860E0073D508 /* AppDelegate.swift in Sources */,
 			);
@@ -426,7 +438,7 @@
 				INFOPLIST_FILE = GoogleBooksFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -455,7 +467,7 @@
 				INFOPLIST_FILE = GoogleBooksFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -588,6 +600,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA5772FF29B087AC0073D508 /* XCRemoteSwiftPackageReference "CosyNetwork" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/djangdal/CosyNetwork";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA57730029B087AC0073D508 /* CosyNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA5772FF29B087AC0073D508 /* XCRemoteSwiftPackageReference "CosyNetwork" */;
+			productName = CosyNetwork;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA5772C029B0860E0073D508 /* Project object */;
 }
