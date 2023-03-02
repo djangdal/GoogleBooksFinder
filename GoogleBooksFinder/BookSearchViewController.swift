@@ -1,19 +1,17 @@
 //
-//  ViewController.swift
+//  BookSearchViewController.swift
 //  GoogleBooksFinder
 //
 //  Created by David Jangdal on 2023-03-02.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
+final class BookSearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .blue
     }
-
-
 }
-
